@@ -1,4 +1,4 @@
-module gitlab.com/guso008/twittor-go
+module github.com/guso008/twittorquovadis
 
 go 1.16
 
