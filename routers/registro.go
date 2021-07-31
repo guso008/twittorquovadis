@@ -10,7 +10,7 @@ import (
 
 /*Registro es la funcion para crear en la BD el registro de usuario*/
 func Registro(rw http.ResponseWriter, r *http.Request) {
-	var t models.Uusario
+	var t models.Usuario
 
 	err := json.NewDecoder(r.Body).Decode(&t)
 

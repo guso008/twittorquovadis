@@ -9,7 +9,7 @@ import (
 )
 
 /*ChequeoYaExisteUsuario  recibe un email de párametro y chequea si ya existe en la BD*/
-func ChequeoYaExisteUsuario(email string) (models.Uusario, bool, string) {
+func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
@@ -17,7 +17,7 @@ func ChequeoYaExisteUsuario(email string) (models.Uusario, bool, string) {
 	col := db.Collection("users")
 
 	condicion := bson.M{"email": email}
-	var resultado models.Uusario
+	var resultado models.Usuario
 
 	err := col.FindOne(ctx, condicion).Decode(&resultado)
 	ID := resultado.ID.Hex()
