@@ -8,7 +8,6 @@ import (
 	"github.com/guso008/twittorquovadis/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/primitive"
 )
 
 /*BuscoPerfil busca perfil en la BD*/
