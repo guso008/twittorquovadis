@@ -13,6 +13,7 @@ func VerPerfil(rw http.ResponseWriter, r *http.Request) {
 
 	if len(ID) < 1 {
 		http.Error(rw, "Debe enviar el parámetro ID", http.StatusBadRequest)
+		return
 	}
 
 	perfil, err := bd.BuscoPerfil(ID)
